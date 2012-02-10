@@ -1,0 +1,18 @@
+.*.sw[a-z]
+.*.*.sw[a-z]
+
+# OS X
+.DS_Store?
+Icon?
+Thumbs.db
+
+
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+*.py[co]

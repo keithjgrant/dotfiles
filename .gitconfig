@@ -1,0 +1,39 @@
+[user]
+	name = Keith Grant
+	email = kgrant@pictage.com
+
+[core]
+    excludesfile = ~/.gitignore
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+#    ui = true
+
+[color "branch"]
+    current = blue reverse
+    local = blue
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = magenta
+    changed = green
+    untracked = cyan
+
+[alias]
+    #log-pretty = log --graph --pretty=oneline --decorate --date=relative
+    log-pretty = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    ff = pull --ff-only
+    is-merged = !bash -c 'git merge-base HEAD origin/"$0" && git rev-parse origin/"$0"'
+    topic = !bash -c 'git checkout -b "$0" && git push -u origin "$0" && git pull'
+    info = remote show origin
+
+[core]
+    editor = vim
