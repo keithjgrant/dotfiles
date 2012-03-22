@@ -13,7 +13,15 @@ set cpo-=<
 set wcm=<C-Z>
 map <F4> :emenu <C-Z>
 
-colorscheme zenburn
+set gfn=Inconsolata:h14
+
+if has('gui_running')
+    colorscheme solarized
+    set background=light
+else
+    colorscheme zenburn
+    set background=dark
+endif
 
 
 function! CurDir()
