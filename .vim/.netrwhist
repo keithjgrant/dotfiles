@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/opt/shootq/atrium/Server/atrium/server/controllers'
+let g:netrw_dirhist_2='/opt/shootq/atrium/Server/public/javascript'
+let g:netrw_dirhist_3='/opt/shootq/atrium/Server/public/javascript/settings'
+let g:netrw_dirhist_4='/opt/shootq/atrium/Server/atrium/server/templates/settings/billing'
