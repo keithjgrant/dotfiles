@@ -50,7 +50,7 @@ zstyle ':vcs_info:*' enable git svn
 
 # Show current git branch name only
 precmd () { 
-    zstyle ':vcs_info:*' formats $'\{%{\e[0;36m%}%b%F{foreground}%c%u%F{foreground}\} '
+    zstyle ':vcs_info:*' formats $'%{@\e[0;36m%}%b%F{foreground}%c%u%F{foreground} '
     vcs_info
 }
 local git='$vcs_info_msg_0_'
@@ -59,12 +59,12 @@ local git='$vcs_info_msg_0_'
 PS1="$(active_virtualenv)${git}${fg_lblue}%~:\$${fg_default} "
 
 # Show a green $ on the status line when vim mode is -- INSERT --
-function zle-line-init zle-keymap-select {
-    PS1="$(active_virtualenv)${git}${fg_lblue}%~:\$${fg_default} "
-    zle reset-prompt
-}
-zle -N zle-line-init
-zle -N zle-keymap-select
+#function zle-line-init zle-keymap-select {
+#    PS1="$(active_virtualenv)${git}${fg_lblue}%~:\$${fg_default} "
+#    zle reset-prompt
+#}
+#zle -N zle-line-init
+#zle -N zle-keymap-select
 
 cd ~/sq
 . /opt/shootq/sq_py_env/bin/activate
