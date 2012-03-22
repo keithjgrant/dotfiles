@@ -32,16 +32,25 @@ fg_cyan=%{$'\e[0;36m'%}
 # version control info
 autoload -Uz vcs_info
 setopt prompt_subst
-zstyle ':vcs_info:*' stagedstr $'%F{magenta}●'
-zstyle ':vcs_info:*' unstagedstr '%F{green}●'
-zstyle ':vcs_info:*' check-for-changes true
+#zstyle ':vcs_info:*' stagedstr $'%F{magenta}●'
+#zstyle ':vcs_info:*' unstagedstr '%F{green}●'
+#zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' enable git svn
+
+# Show current git branch and dots indicating uncommitted changes
+# (requires staged info above -- a little slow)
+#precmd () { 
+#    if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
+#        zstyle ':vcs_info:*' formats $'[%{\e[1;33m%}%b%F{foreground}:%c%u%F{foreground}] '
+#    } else {
+#        zstyle ':vcs_info:*' formats $'(%{\e[1;33m%}%b%F{foreground}:%c%u%F{yellow}●%F{foreground}) '
+#    }
+#    vcs_info
+#}
+
+# Show current git branch name only
 precmd () { 
-    if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
-        zstyle ':vcs_info:*' formats $'[%{\e[1;33m%}%b%F{foreground}:%c%u%F{foreground}] '
-    } else {
-        zstyle ':vcs_info:*' formats $'(%{\e[1;33m%}%b%F{foreground}:%c%u%F{yellow}●%F{foreground}) '
-    }
+    zstyle ':vcs_info:*' formats $'\{%{\e[0;36m%}%b%F{foreground}%c%u%F{foreground}\} '
     vcs_info
 }
 local git='$vcs_info_msg_0_'
