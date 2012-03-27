@@ -1,4 +1,8 @@
-Single place for my various config files to live
+Single home for my various config files for Vim, Git, Zshell, etc.
 
-Tired of re-doing this or manually copying files whenever I need to
-setup on a new machine.
+I got tired of re-doing this or manually copying files whenever I need
+to set up a new machine.
+
+USAGE: Clone this repository anywhere you like, then use symlinks
+to link to the desired files from their appropriate place (generally
+your home folder).
