@@ -4,6 +4,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set ruler
+set autoindent
+set smarttab
 
 set hidden
 syntax enable
@@ -16,6 +18,8 @@ map <F4> :emenu <C-Z>
 set gfn=Inconsolata:h14
 
 if has('gui_running')
+    set clipboard=unnamed
+
     colorscheme solarized
     set background=light
 else
