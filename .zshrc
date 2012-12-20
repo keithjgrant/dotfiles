@@ -68,3 +68,7 @@ PS1="$(active_virtualenv)${git}${fg_lblue}%~:\$${fg_default} "
 
 cd ~/sq
 . /opt/shootq/sq_py_env/bin/activate
+
+if [ -d ~/bin ] ; then
+    PATH=~/bin:"${PATH}"
+fi
