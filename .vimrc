@@ -53,9 +53,11 @@ set laststatus=2
 
 call pathogen#infect()
 
-nmap <Leader>i Oimport ipdb; ipdb.set_trace()
-nmap <Leader>p Oimport pdb; pdb.set_trace()
+nmap <Leader>i Oimport ipdb; ipdb.set_trace()
+nmap <Leader>p Oimport pdb; pdb.set_trace()
 nmap <Leader>l Oconsole.log();<Esc>hi
+nmap <Leader>d Odebugger;
+nmap <Leader><Space> :%s/\s\+$//e<Return>
 
 " enable loading the plugin files, (filetype plugin indent on) enable loading the indent file
 filetype plugin on
@@ -64,9 +66,9 @@ filetype plugin on
 "autocmd FileType python autocmd BufWritePre <buffer> :%s/\s\+$//e
 "autocmd FileType javascript autocmd BufWritePre <buffer> :%s/\s\+$//e
 set list
-set listchars=trail:·,tab:▸\ ,precedes:«,extends:»
+set listchars=trail:·,tab:→\ ,precedes:«,extends:»
 
 " http://stackoverflow.com/questions/1562633/setting-vim-whitespace-preferences-by-filetype
 "autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
-autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab wrap!
 autocmd Filetype mako setlocal ts=2 sts=2 sw=2 expandtab
