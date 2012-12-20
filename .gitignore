@@ -1,8 +1,9 @@
 .*.sw[a-z]
+*.sw[a-z]
 .*.*.sw[a-z]
 
 # OS X
-.DS_Store?
+.DS_Store
 Icon?
 Thumbs.db
 

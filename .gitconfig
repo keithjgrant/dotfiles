@@ -2,6 +2,9 @@
 	name = Keith Grant
 	email = kgrant@pictage.com
 
+[push]
+    default = tracking
+
 [core]
     excludesfile = ~/.gitignore
 
@@ -10,6 +13,7 @@
     diff = auto
     status = auto
 #    ui = true
+    background = dark
 
 [color "branch"]
     current = blue reverse
@@ -37,3 +41,8 @@
 
 [core]
     editor = vim
+
+[diff]
+    tool = vimdiff
+    #tool = meld
+    #tool = mvim -d
