@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/opt/shootq/atrium/Server/atrium/server/controllers'
-let g:netrw_dirhist_2='/opt/shootq/atrium/Server/public/javascript'
-let g:netrw_dirhist_3='/opt/shootq/atrium/Server/public/javascript/settings'
-let g:netrw_dirhist_4='/opt/shootq/atrium/Server/atrium/server/templates/settings/billing'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/opt/shootq/sq4/SQWeb/sqpyramid/sqpyramid/templates'
+let g:netrw_dirhist_2='/opt/shootq/sq4/SQWeb/sqpyramid/sqpyramid/view'
+let g:netrw_dirhist_3='/opt/shootq/atrium/Server/scripts/1.0.7'
+let g:netrw_dirhist_4='/opt/shootq/shootq/shootq/tests/tasks'
+let g:netrw_dirhist_5='/Users/kgrant/skb/public/javascript/skb'
+let g:netrw_dirhist_6='/Users/kgrant/skb/public/javascript'
+let g:netrw_dirhist_7='/Users/kgrant/Documents/dotfiles/.vim/after'
+let g:netrw_dirhist_8='/opt/shootq/shootq/shootq/model'
