@@ -72,3 +72,9 @@ cd ~/sq
 if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
+
+function clean {
+    typeset to_del="$1"
+    for file in `find . -name $to_del`; do rm -rf $file; done
+}
+
