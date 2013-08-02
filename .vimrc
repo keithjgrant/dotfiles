@@ -34,6 +34,7 @@ if has('gui_running')
 
     colorscheme solarized
     set background=dark
+    set guioptions-=T
 else
     colorscheme zenburn
     set background=dark
@@ -47,7 +48,8 @@ function! CurDir()
     return curdir
 endfunction
 
-set statusline=CWD:%{CurDir()}\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]\ %h%m%r%y%=%#statuslineerr#%t%*\ %c,%l\ %P\ %#statuslineerr#%*
+"set statusline=CWD:%{CurDir()}\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]\ %h%m%r%y%=%#statuslineerr#%t%*\ %c,%l\ %P\ %#statuslineerr#%*
+set statusline=CWD:%{CurDir()}\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]\ %h%m%r%y%=%#statuslineerr#%t%*\ [b%n]\ %c,%l\ %P\ %#statuslineerr#%*
 
 set laststatus=2
 
@@ -71,4 +73,5 @@ set listchars=trail:·,tab:→\ ,precedes:«,extends:»
 " http://stackoverflow.com/questions/1562633/setting-vim-whitespace-preferences-by-filetype
 "autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
 autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab wrap!
+autocmd Filetype css setlocal ts=2 sts=2 sw=2 expandtab wrap!
 autocmd Filetype make setlocal ts=2 sts=2 sw=2 expandtab

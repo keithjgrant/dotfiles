@@ -51,9 +51,13 @@ cd ~/sq
 if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
+PATH=/usr/local/sbin:"${PATH}"
 
 function clean {
     typeset to_del="$1"
     for file in `find . -name $to_del`; do rm -rf $file; done
 }
 
+alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+
+export EDITOR="subl"
