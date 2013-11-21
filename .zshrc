@@ -10,7 +10,7 @@ autoload -U compinit && compinit
 # case insensitive tab completion
 unsetopt correctall
 
-# http://www.gentoo.org/doc/en/zsh.xml - reference 
+# http://www.gentoo.org/doc/en/zsh.xml - reference
 # function to determine the currently active virtualenv
 function active_virtualenv() {
     if [ -z "$VIRTUAL_ENV" ]; then
@@ -45,9 +45,6 @@ local git='$vcs_info_msg_0_'
 # Custom status line
 PS1="$(active_virtualenv)${git} ${fg_lblue}%~:\$${fg_default} "
 
-cd ~/sq
-. /opt/shootq/sq_py_env/bin/activate
-
 if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
@@ -59,5 +56,10 @@ function clean {
 }
 
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+alias ls='ls -FG'  # use colors
+alias la='ls -Fa'  # list all files
+alias ll='ls -Fls' # long listing format
+alias ackc='ack --type=coffee'
+alias gitroot='cd $(git rev-parse --show-toplevel)'
 
 export EDITOR="subl"
