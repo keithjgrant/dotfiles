@@ -1,12 +1,12 @@
 [user]
-	name = Keith Grant
-	email = kgrant@pictage.com
+    name = Keith Grant
+    email = keith.grant@theice.com
 
 [push]
     default = tracking
 
 [core]
-    excludesfile = ~/.gitignore
+	excludesfile = /Users/kgrant/.gitignore
 
 [color]
     branch = auto
@@ -32,11 +32,9 @@
     untracked = cyan
 
 [alias]
-    #log-pretty = log --graph --pretty=oneline --decorate --date=relative
     log-pretty = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
     ff = pull --ff-only
     is-merged = !bash -c 'git merge-base HEAD origin/"$0" && git rev-parse origin/"$0"'
-    #is-merged = !git merge-base HEAD origin/$1 && git rev-parse origin/$1
     topic = !bash -c 'git checkout -b "$0" && git push -u origin "$0" && git pull'
     info = remote show origin
     nuke = !bash -c 'git branch -d "$0" && git push origin :"$0"'
@@ -48,3 +46,11 @@
     tool = vimdiff
     #tool = meld
     #tool = mvim -d
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[url "https://github"]
+	insteadOf = git://github

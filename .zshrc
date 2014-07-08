@@ -49,6 +49,7 @@ if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
 PATH=/usr/local/sbin:"${PATH}"
+export PATH=/usr/local/share/npm/bin:/usr/local/bin:$PATH
 
 function clean {
     typeset to_del="$1"
@@ -63,3 +64,4 @@ alias ackc='ack --type=coffee'
 alias gitroot='cd $(git rev-parse --show-toplevel)'
 
 export EDITOR="subl"
+export PATH=/Users/kgrant/pebble-dev/PebbleSDK-current/bin:$PATH
