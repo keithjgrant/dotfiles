@@ -65,3 +65,10 @@ alias gitroot='cd $(git rev-parse --show-toplevel)'
 
 export EDITOR="subl"
 export PATH=/Users/kgrant/pebble-dev/PebbleSDK-current/bin:$PATH
+
+# key bindings
+bindkey '\e[3~' delete-char
+bindkey '\e[H' beginning-of-line
+bindkey '\e[F' end-of-line
+bindkey '\e[5~' backward-word
+bindkey '\e[6~' forward-word
