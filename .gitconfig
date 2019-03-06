@@ -58,3 +58,5 @@
   insteadOf = git://gitorious.intcx.net
 [url "ssh://git@stash.intcx.net:7999"]
   insteadOf = git://stash.intcx.net
+[credential]
+	helper = osxkeychain

@@ -56,15 +56,13 @@ function clean {
     for file in `find . -name $to_del`; do rm -rf $file; done
 }
 
-alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 alias ls='ls -FG'  # use colors
 alias la='ls -Fa'  # list all files
 alias ll='ls -Fls' # long listing format
 alias ackc='ack --type=coffee'
 alias gitroot='cd $(git rev-parse --show-toplevel)'
 
-export EDITOR="subl"
-export PATH=/Users/kgrant/pebble-dev/PebbleSDK-current/bin:$PATH
+export EDITOR="vim"
 
 # key bindings
 bindkey '\e[3~' delete-char
